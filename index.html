@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM - Document Object Model</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="titulo">Fundação de Ensino de Contagem</h1>
+    <p>Curso de Frontend</p>
+    <nav>
+      <ul>
+        <li>Início</li>
+        <li>Cursos</li>
+        <li>Contato</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Manipulação do DOM</h2>
+      <p>Este é um parágrafo que será utilizado nos exercícios.</p>
+      <p class="destaque">Este é um texto com a classe destaque.</p>
+    </section>
+
+    <section class="caixas">
+      <div class="caixa"><h3>Caixa #1</h3><p>Conteúdo da 1ª caixa.</p></div>
+      <div class="caixa"><h3>Caixa #2</h3><p>Conteúdo da 2ª caixa.</p></div>
+      <div class="caixa"><h3>Caixa #3</h3><p>Conteúdo da 3ª caixa.</p></div>
+    </section>
+
+    <section class="botoes">
+      <button id="btn-principal">Botão principal</button>
+      <button id="btn-secundario" class="sec">Botão secundário</button>
+    </section>
+
+    <section>
+      <h2>Lista de tecnologias</h2>
+      <ul id="lista">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>PHP</li>
+        <li>Rust</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Imagem</h2>
+      <img src="https://picsum.photos/300/200" alt="Imagem de exemplo">
+    </section>
+
+    <section>
+      <h2>Formulário</h2>
+      <form>
+        <label for="nome">Nome</label>
+        <input id="nome" placeholder="Digite seu nome">
+
+        <label for="email">E-mail</label>
+        <input id="email" placeholder="Digite seu e-mail">
+
+        <label for="curso">Curso</label>
+        <select id="curso">
+          <option value="">Selecione</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+        </select>
+
+        <label for="comentario">Comentário</label>
+        <textarea id="comentario" rows="4"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Tabela de alunos</h2>
+      <table>
+        <tr><th>Nome</th><th>Idade</th><th>Curso</th></tr>
+        <tr><td>Ana Souza</td><td>22</td><td>HTML</td></tr>
+        <tr><td>Bruno Lima</td><td>25</td><td>CSS</td></tr>
+        <tr><td>Carla Mendes</td><td>19</td><td>JavaScript</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <footer><p>Curso de Frontend - Manipulação do DOM</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
