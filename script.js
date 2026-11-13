@@ -1,29 +1,44 @@
-// 1) getElementById -> pega UM elemento pelo id
-const titulo = document.getElementById("titulo");
+const inputNome = document.getElementById('nome');
+console.log("Input nome encontrado:", inputNome);
 
-// pega todos de uma classe (lista; [0] = o primeiro)
-document.getElementsByClassName("destaque")[0].style.color = "crimson";
+const elementosDestaque = document.getElementsByClassName('destaque');
+console.log("Elementos com a classe 'destaque':", elementosDestaque);
 
-//  pega todos de uma tag (lista)
-document.getElementsByTagName("h3")[0].style.textTransform = "uppercase";
+const todosParagrafos = document.getElementsByTagName('p');
+console.log("Quantidade de parágrafos na página:", todosParagrafos.length);
 
-//  pega o PRIMEIRO que combina com o seletor CSS
-const lista = document.querySelector("#lista");
+const tituloPrincipal = document.querySelector('h1');
 
-//  pega TODOS que combinam com o seletor CSS
-const caixas = document.querySelectorAll(".caixa");
+tituloPrincipal.innerHTML = "Fundação de Ensino de Contagem - Frontend";
 
-//  troca o conteúdo HTML de dentro do elemento
-titulo.innerHTML = "Fundação de Ensino de <em>Contagem</em>";
+const caixas = document.querySelectorAll('div');
 
-//  ao clicar, liga/desliga a classe "ativa"
-document.querySelector("#btn-principal").addEventListener("click", () => {
-  caixas.forEach(caixa => caixa.classList.toggle("ativa"));
+caixas.forEach(function(caixa) {
+    caixa.addEventListener('click', function() {
+        caixa.style.borderLeftColor = 'green';
+    });
 });
 
-//  cria um <li> e coloca dentro da lista
-document.querySelector("#btn-secundario").addEventListener("click", () => {
-  const li = document.createElement("li");
-  li.textContent = "Nova tecnologia";
-  lista.appendChild(li);
+const botoes = document.querySelectorAll('button');
+
+const botaoPrincipal = botoes[0];
+const botaoSecundario = botoes[1];
+
+botaoPrincipal.addEventListener('click', function() {
+    caixas.forEach(function(caixa) {
+        caixa.style.borderLeftColor = '#004a8d';
+    });
 });
+
+botaoSecundario.addEventListener('click', function() {
+    caixas.forEach(function(caixa) {
+        caixa.style.borderLeftColor = 'transparent';
+    });
+});
+
+const novaTecnologia = document.createElement('li');
+novaTecnologia.innerHTML = "React"; // Define o texto interno
+
+const listaTecnologias = document.querySelectorAll('ul')[1]; 
+
+listaTecnologias.appendChild(novaTecnologia);
